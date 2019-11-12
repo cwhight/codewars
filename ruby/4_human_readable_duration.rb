@@ -8,15 +8,11 @@ def format_duration(seconds)
     minutes: seconds / 60 % 60,
     seconds: seconds % 60
   }
-
-
   solution = []
-
   hash.each do |key, value|
     if value > 0
       value == 1 ? solution << "#{value} #{key.to_s.chop}" : solution << "#{value} #{key}"
     end
   end
   solution.join(", ").reverse.sub(",", "dna ").reverse
-
 end
